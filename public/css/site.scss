@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$site-primary: #b1bcb9;
+$site-light: #d9d9d9;
+$site-dark: #555555;
+$site-black: #1e1e1e;
+$site-strong: #96a9a4;
+
+body {
+    font-family: 'Work Sans', sans-serif !important;
+    background-color: $site-light !important;
+    color: $site-black !important;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #585858;
+    border-radius: 20px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #c3c3c3;
+    border-radius: 20px;
+}
+
+h1, h2 {
+    color: $site-light !important;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+p a {
+    color: $site-strong !important;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer !important;
+
+    &:hover {
+        color: $site-dark !important;
+    }
+}
+
+footer {
+    background-color: $site-black !important;
+    color: $site-light !important;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+header {
+    height: 100vh;
+    background: rgb(30,30,30);
+    background: linear-gradient(45deg, rgba(30,30,30,1) 0%, rgba(85,85,85,1) 50%, rgba(217,217,217,1) 100%);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1, header h2 {
+    text-shadow: 0px 2px 2px $site-black;
+}
+
+header a {
+    margin-top: 1.6rem;
+    color: $site-light  !important;
+    background-color: $site-strong !important;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.1s ease-in-out;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    &:hover {
+        color: $site-dark !important;
+        transform: scale(1.1);
+    }
+
+    &:active {
+        transform: scale(1.05);
+    }
+}
+
+main, section {
+    background-color: $site-light;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.prevent-select {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.donate-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 52px;
+    gap: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 15px;
+    background: #555;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        background: #333;
+    }
+}
+
+.grid-structure {
+    margin: 1rem 6rem;
+    
+}
+
+.grid-structure .row div {
+    padding: 2.5rem 3.5rem;
+}
+
+.grid-structure h4 {
+    text-align: center;
+    margin-bottom: 1.6rem;
+    font-size: 1.8rem;
+}
+
+.grid-structure p {
+    font-size: 1.2rem;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1300px) {
+
+}
+
+@media screen and (max-width: 650px) {
+
+}
+
+@media screen and (max-width: 480px) {
+
+}
+
+@media screen and (max-width: 375px) {
+
+}
+
+/* ANIMATIONS */
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
