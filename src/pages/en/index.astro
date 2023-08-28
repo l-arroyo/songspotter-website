@@ -1,0 +1,67 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import NavComponent from '../../components/NavComponent.astro';
+
+const pages = ["Home", "Release Notes", "Contact"];
+const links = ["/", "/releases", "/contact"];
+---
+
+<Layout title="SongSpotter">
+	<NavComponent Pages={pages} Href={links} />
+	<header>
+		<h1>SongSpotter</h1>
+		<h2>The songs you didn't know you liked</h2>
+		<a role="button" href="#discover" class="prevent-select" data-bs-toggle="tooltip" data-bs-placement="right" title="Click me!">START DISCOVERING</a>
+	</header>
+	<main id="discover">
+		<h3>Your music taste is <strong>unique</strong></h3>
+		<h4>Discover new music based on your Spotify listening history</h4>
+		<img class="img" src="/img/p_discover_desktop.png" alt="SongSpotter discover page">
+	</main>
+	<section id="about">
+		<h3>About the project</h3>
+		<div class="grid-structure d-grid gap-3">
+			<div class="row">
+				<div class="col-12 col-md-6">
+					<h4>What is SongSpotter?</h4>
+					<p>SongSpotter is a web app that allows you to discover new music based on your favourite songs. It has been programmed in ASP.NET Core and it uses the Spotify API to get the user's listening history and recommendations.</p>
+					<p class="mt-4">We came up with the idea of SongSpotter because we were tired of the same old songs in our playlists. We wanted to create a new way to discover new music, but we didn't know where to start. That's why we decided to make an application with a simple and good looking interface to allow everyone to discover new music based on their own taste.</p>
+				</div>
+				<div class="col-12 col-md-6">
+					<h4>Our team</h4>
+					<p>We are <a href="https://www.linkedin.com/in/lucas-arroyo-174a28196/" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Connect with me in LinkedIn!">Lucas Arroyo</a> and <a href="https://www.linkedin.com/in/miguelarrojo/" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Connect with me in LinkedIn!">Miguel Arrojo</a>, two passionate developers who love music. We created SongSpotter for helping users to make music discovery easier than ever.</p>
+					<p class="mt-4">Even though we are just two people, we are working hard to make SongSpotter a reality. We are currently working on the beta version of the app, which will be released soon.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="beta">
+		<h3>Be the first to try it out</h3>
+		<h4>Sign up here for the future closed beta</h4>
+		<a class="beta-button py-2" role="button" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Click me!">
+			<img src="/img/iconSignUp.svg" alt="Sign Up Icon" draggable="false">
+			<span>SIGN UP</span>
+		</a>
+		<p class="mt-3 text-center">Already have access? <br/><a href="https://beta.songspotter.app" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open SongSpotter">Go to the app</a></p>
+	</section>
+
+	<section id="contribute">
+		<h3>Contribute</h3>
+		<h4>
+			Any small donation is a big help for us
+		</h4>
+		<a class="donate-button" role="button" href="https://www.buymeacoffee.com/songspotter" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Make a donation">
+			<img src="/img/iconDonate.svg" alt="Donate Icon" draggable="false">
+			<span>BUY US A COFFEE</span>
+		</a>
+	</section>
+
+	<section id="contact">
+		<h3>Out community</h3>
+		<h4>Found a bug? Have a suggestion? Want to say hi?</h4>
+		<a class="discord-button" role="button" href="https://discord.gg/ErcZ4mnFd7" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Join to discord server">
+			<img src="/img/iconDiscord.svg" alt="Discord Icon" draggable="false">
+			<span>DISCORD SERVER</span>
+		</a>
+	</section>
+</Layout>

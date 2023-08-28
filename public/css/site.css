@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
   font-family: "Work Sans", sans-serif !important;
-  background-color: #d9d9d9 !important;
-  color: #1e1e1e !important;
+  background-color: #1e1e1e !important;
+  color: #d9d9d9 !important;
 }
 
 body::-webkit-scrollbar {
@@ -33,14 +33,19 @@ h2 {
 }
 
 p a {
-  color: #96a9a4 !important;
+  color: #52796F !important;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.1s ease-in-out;
   cursor: pointer !important;
 }
 p a:hover {
-  color: #555555 !important;
+  color: #96a9a4 !important;
+}
+
+strong {
+  color: #52796F !important;
+  font-weight: 600;
 }
 
 footer {
@@ -48,6 +53,8 @@ footer {
   color: #d9d9d9 !important;
   text-align: center;
   margin-top: 1rem;
+  position: absolute;
+  width: 100%;
 }
 
 header {
@@ -63,13 +70,13 @@ header {
 }
 
 header h1, header h2 {
-  text-shadow: 0px 2px 2px #1e1e1e;
+  text-shadow: 0px 4px 4px #1e1e1e;
 }
 
 header a {
   margin-top: 1.6rem;
   color: #d9d9d9 !important;
-  background-color: #96a9a4 !important;
+  background-color: #52796F !important;
   padding: 1rem 2rem;
   text-decoration: none;
   font-size: 1.2rem;
@@ -79,7 +86,7 @@ header a {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 header a:hover {
-  color: #555555 !important;
+  color: #ffffff;
   transform: scale(1.1);
 }
 header a:active {
@@ -87,8 +94,8 @@ header a:active {
 }
 
 main, section {
-  background-color: #d9d9d9;
-  height: 100vh;
+  background-color: #1e1e1e;
+  padding: 25rem 0 25rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -110,7 +117,7 @@ h4 {
        user-select: none;
 }
 
-.donate-button {
+.donate-button, .discord-button, .beta-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -125,9 +132,16 @@ h4 {
   padding: 5px 15px;
   background: #555;
   transition: all 0.1s ease-in-out;
+  margin-top: 1.3rem;
 }
-.donate-button:hover {
+.donate-button:hover, .discord-button:hover, .beta-button:hover {
   background: #333;
+}
+
+img.img {
+  max-width: 50rem;
+  margin-top: 2.5rem;
+  box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.25);
 }
 
 .grid-structure {
