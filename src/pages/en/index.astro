@@ -1,9 +1,12 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import NavComponent from '../../components/NavComponent.astro';
+import Carrousel from '../../components/Carrousel.astro';
 
 const pages = ["Home", "Release Notes", "Contact"];
 const links = ["/", "/releases", "/contact"];
+
+const images = ["/img/p_discover_desktop.png"];
 ---
 
 <Layout title="SongSpotter">
@@ -16,7 +19,8 @@ const links = ["/", "/releases", "/contact"];
 	<main id="discover">
 		<h3>Your music taste is <strong>unique</strong></h3>
 		<h4>Discover new music based on your Spotify listening history</h4>
-		<img class="img" src="/img/p_discover_desktop.png" alt="SongSpotter discover page">
+		<Carrousel Images={images}; />
+		<!--<img class="img" src="/img/p_discover_desktop.png" alt="SongSpotter discover page">-->
 		<a role="button" href="#about" class="button-down prevent-select" data-bs-toggle="tooltip" data-bs-placement="top" title="Next Section">
 			<img src="/img/iconDown.svg" alt="Arrow Icon" draggable="false" width="35">
 		</a>
@@ -42,9 +46,9 @@ const links = ["/", "/releases", "/contact"];
 		</a>
 	</section>
 	<section id="beta">
-		<h3>Be the first to try it out</h3>
+		<h3>Be the first to <strong>try it out</strong></h3>
 		<h4>Sign up here for the future closed beta</h4>
-		<a class="beta-button py-2" role="button" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Click me!">
+		<a class="beta-button py-2" role="button" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sign up here">
 			<img src="/img/iconSignUp.svg" alt="Sign Up Icon" draggable="false">
 			<span>SIGN UP</span>
 		</a>
@@ -72,7 +76,7 @@ const links = ["/", "/releases", "/contact"];
 	<section id="discord">
 		<h3>Out community</h3>
 		<h4>Found a bug? Have a suggestion? Want to say hi?</h4>
-		<a class="discord-button" role="button" href="https://discord.gg/ErcZ4mnFd7" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Join to discord server">
+		<a class="discord-button" role="button" href="https://discord.gg/ErcZ4mnFd7" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Join to our discord server">
 			<img src="/img/iconDiscord.svg" alt="Discord Icon" draggable="false">
 			<span>DISCORD SERVER</span>
 		</a>

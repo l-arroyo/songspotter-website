@@ -3,6 +3,7 @@ body {
   font-family: "Work Sans", sans-serif !important;
   background-color: #1e1e1e !important;
   color: #d9d9d9 !important;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -12,6 +13,7 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background: #585858;
   border-radius: 20px;
+  height: 150px;
 }
 
 body::-webkit-scrollbar-track {
@@ -102,6 +104,11 @@ main, section {
   align-items: center;
 }
 
+section#about {
+  background: url("/img/bg-bubbles.svg") no-repeat;
+  background-size: contain;
+}
+
 section#beta {
   background: url("/img/bg-wave-top.svg") no-repeat;
   background-size: cover;
@@ -157,6 +164,10 @@ h4 {
 }
 .donate-button:hover, .discord-button:hover, .beta-button:hover {
   background: #333;
+  transform: scale(1.05);
+}
+.donate-button:active, .discord-button:active, .beta-button:active {
+  transform: scale(1.01);
 }
 
 .button-down {
