@@ -112,6 +112,29 @@ main, section {
     align-items: center;
 }
 
+section#beta {
+    background: url('/img/bg-wave-top.svg') no-repeat;
+    background-size: cover;
+    color: $site-black;
+    padding-bottom: 0 !important;
+
+    .button-down {  
+        background-color: $site-black;
+
+        &:hover {
+        background-color: #161616
+        }
+    }
+}
+
+#wave-down {
+    background: url('/img/bg-wave-bottom.svg') no-repeat;
+    background-position-y: bottom;
+    background-size: cover;
+    width: 100vw;
+    height: 50vh;
+}
+
 h3 {
     font-size: 3rem;
 }
@@ -162,7 +185,7 @@ h4 {
     top: 30px;
 
     &:hover {
-        background-color: $site-strong;
+        background-color: #b4b2b2;
         transform: scale(1.1);
     }
 

@@ -10,6 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.10.14"
-  }
+    "astro": "^2.10.15"
+  },
+  "description": "This is the website for the SongSpotter project. It is built using [Astro](https://astro.build/).",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
