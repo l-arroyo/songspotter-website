@@ -18,7 +18,7 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body onscroll="scrollHandler">
 		<slot />
 		<footer class="py-4 text-center">
 			<p class="mb-1">&copy; 2023 SONGSPOTTER. Miguel Arrojo / Lucas Arroyo.</p>
@@ -32,5 +32,6 @@ const { title } = Astro.props;
 				return new bootstrap.Tooltip(tooltipTriggerEl)
 			});
 		</script>
+		<script type="text/javascript" src="/js/site.js"></script>
 	</body>
 </html>
