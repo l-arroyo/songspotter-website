@@ -135,6 +135,7 @@ section#beta {
 }
 
 #wave-down {
+    background-color: $site-black;
     background: url('/img/bg-wave-bottom.svg') no-repeat;
     background-position-y: bottom;
     background-size: cover;
@@ -210,9 +211,13 @@ h4 {
     animation: arrow 1s ease infinite;
 }
 
+#carousel {
+    margin-top: 2.5rem;
+    width: 50rem;
+}
+
 img.img {
     max-width: 50rem;
-    margin-top: 2.5rem;
     box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.25);
 }
 
