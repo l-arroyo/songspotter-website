@@ -1,0 +1,35 @@
+---
+var { classes } = Astro.props;
+
+var navClasses = classes + " navbar navbar-expand-lg navbar-light bg-light";
+
+const pages = ["Home", "Release Notes", "Contact"];
+const links = ["/", "/releases", "/contact"];
+---
+
+<nav class={navClasses}>
+    <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+    >
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            {
+                pages.map((page, index) => (
+                    <li class="nav-item">
+                        <a class="nav-link" href={links[index]}>
+                            {page}
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+</nav>

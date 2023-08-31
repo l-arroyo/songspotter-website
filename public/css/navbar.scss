@@ -1,0 +1,32 @@
+$site-primary: #96a9a4;
+$site-light: #d9d9d9;
+$site-dark: #555555;
+$site-black: #1e1e1e;
+$site-strong: #52796F;
+
+nav.navbar {
+    width: 100%;
+    background-color: $site-black !important;
+
+    & .collapse {
+        justify-content: center !important;
+    }
+}
+
+nav.navbar.home {
+    position: absolute;
+    top: 0;
+}
+
+a.nav-link {
+    font-weight: 500;
+    color: $site-light !important;
+
+    & .active {
+        color: $site-primary!important;
+    }
+
+    &:hover {
+        color: $site-primary!important;
+    }
+}

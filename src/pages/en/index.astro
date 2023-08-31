@@ -1,19 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import NavComponent from '../../components/NavComponent.astro';
 import Carrousel from '../../components/Carrousel.astro';
-
-const pages = ["Home", "Release Notes", "Contact"];
-const links = ["/", "/releases", "/contact"];
 
 const images = ["/img/p_discover_desktop.png", "/img/p_liked_desktop.png"];
 const alt = ["Discover Page", "Liked Page"];
-
 ---
 
 <Layout title="SongSpotter">
-	<NavComponent Pages={pages} Href={links} />
-	<header>
+	<header id="home">
 		<h1>SongSpotter</h1>
 		<h2>The songs you didn't know you liked</h2>
 		<a role="button" href="#discover" class="prevent-select" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Click me!">START DISCOVERING</a>

@@ -6,10 +6,27 @@ body {
   overflow-x: hidden;
 }
 
-header, main {
-  margin: 5rem 5rem;
+header {
+  margin: 5rem 5rem 0rem 5rem;
 }
 
-header.releases-header h2 {
-  height: initial !important;
+main {
+  margin: 3rem 5rem 5rem 5rem;
+}
+
+header.releases-header h3 {
+  font-size: 1rem;
+}
+header.releases-header h3 span {
+  font-style: italic;
+  font-weight: 400;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+}
+
+strong {
+  font-weight: 600;
+  color: #52796F;
 }/*# sourceMappingURL=releases.css.map */

@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/BasicLayout.astro";
+---
+
+<Layout title="SongSpotter">
+    <script type="text/javascript">
+        window.addEventListener("DOMContentLoaded", () => {
+            let lang = getLanguage();
+
+            if (!lang) lang = "en";
+
+            window.location.href = `${lang}/releases`;
+        });
+    </script>
+</Layout>

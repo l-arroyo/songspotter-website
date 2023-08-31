@@ -59,7 +59,7 @@ footer {
   width: 100%;
 }
 
-header {
+header#home {
   height: 100vh;
   background: rgb(150, 169, 164);
   background: linear-gradient(300deg, rgb(150, 169, 164) 25%, rgb(118, 127, 125) 50%, rgb(85, 85, 85) 75%, rgb(30, 30, 30) 100%);
@@ -71,11 +71,11 @@ header {
   align-items: center;
 }
 
-header h1, header h2 {
+header#home h1, header#home h2 {
   text-shadow: 0px 4px 4px #1e1e1e;
 }
 
-header a {
+header#home a {
   margin-top: 1.6rem;
   color: #d9d9d9 !important;
   background-color: #52796F !important;
@@ -87,12 +87,21 @@ header a {
   transition: all 0.1s ease-in-out;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-header a:hover {
+header#home a:hover {
   color: #ffffff;
   transform: scale(1.1);
 }
-header a:active {
+header#home a:active {
   transform: scale(1.05);
+}
+
+header#releases {
+  background-color: #d9d9d9;
+  padding: 3rem;
+  margin-top: 3.5rem;
+}
+header#releases h1 {
+  color: #1e1e1e !important;
 }
 
 main, section {
