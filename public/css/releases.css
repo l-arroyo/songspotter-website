@@ -14,6 +14,9 @@ main {
   margin: 3rem 5rem 5rem 5rem;
 }
 
+header.releases-header h1 {
+  font-size: 2.5rem;
+}
 header.releases-header h3 {
   font-size: 1rem;
 }
@@ -23,10 +26,16 @@ header.releases-header h3 span {
 }
 
 h2 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 strong {
   font-weight: 600;
   color: #52796F;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }/*# sourceMappingURL=releases.css.map */

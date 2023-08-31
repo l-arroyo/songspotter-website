@@ -1,6 +1,7 @@
 ---
 layout: ../../../layouts/ReleaseLayout.astro
-title: Pre-Alpha Version (09/01/2023)
+title: Pre-Alpha Version
+date: 09/01/2023
 description: Release Notes of the SongSpotter's Pre-Alpha Version
 keywords: release, update, changelog, songspotter
 author: SongSpotter

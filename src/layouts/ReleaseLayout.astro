@@ -27,6 +27,7 @@ const { frontmatter } = Astro.props;
         <Navbar />
         <header class="releases-header">
             <h1>{frontmatter.title}</h1>
+            <h3 class="mb-3"><span>{frontmatter.date}</span></h3>
             <h3>Published by: <span>{frontmatter.author}</span></h3>
             <hr />
         </header>

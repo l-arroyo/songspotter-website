@@ -27,11 +27,11 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 4.5rem;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 p a {
@@ -104,7 +104,7 @@ header#releases h1 {
   color: #1e1e1e !important;
 }
 
-main, section {
+main:not(#releases), section {
   background-color: #1e1e1e;
   padding: 25rem 0 25rem 0;
   display: flex;
@@ -113,16 +113,32 @@ main, section {
   align-items: center;
 }
 
+main#releases {
+  background-color: #d9d9d9;
+  padding: 0 5rem 5rem 5rem;
+  min-height: 62vh;
+  color: #1e1e1e;
+}
+main#releases h3 {
+  margin-bottom: 2rem;
+}
+main#releases ul {
+  color: #555555;
+}
+main#releases a {
+  color: #52796F;
+  text-decoration: underline;
+}
+
 section#about {
   background: url("/img/bg-bubbles.svg") no-repeat;
   background-size: contain;
 }
 
 section#beta {
-  background: url("/img/bg-wave-top.svg") no-repeat;
-  background-size: cover;
+  background-color: #d9d9d9;
   color: #1e1e1e;
-  padding-bottom: 0 !important;
+  padding: 0 !important;
 }
 section#beta .button-down {
   background-color: #1e1e1e;
@@ -131,13 +147,20 @@ section#beta .button-down:hover {
   background-color: #161616;
 }
 
+#wave-up {
+  background: url("/img/bg-wave-top.svg") no-repeat #1e1e1e;
+  background-position-y: top;
+  background-size: cover;
+  width: 101%;
+  height: 45vh;
+}
+
 #wave-down {
-  background-color: #1e1e1e;
-  background: url("/img/bg-wave-bottom.svg") no-repeat;
+  background: url("/img/bg-wave-bottom.svg") no-repeat #1e1e1e;
   background-position-y: bottom;
   background-size: cover;
-  width: 100%;
-  height: 50vh;
+  width: 102%;
+  height: 45vh;
 }
 
 h3 {
