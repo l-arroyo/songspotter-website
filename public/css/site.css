@@ -4,6 +4,9 @@ body {
   background-color: #1e1e1e !important;
   color: #d9d9d9 !important;
   overflow-x: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 body.releases {
@@ -43,6 +46,14 @@ h2 {
   font-size: 2rem;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 1em;
+  justify-content: center;
+}
+
 p a {
   color: #52796F !important;
   text-decoration: none;
@@ -69,10 +80,9 @@ footer {
 
 header#home {
   height: 100vh;
-  background: rgb(150, 169, 164);
-  background: linear-gradient(300deg, rgb(150, 169, 164) 25%, rgb(118, 127, 125) 50%, rgb(85, 85, 85) 75%, rgb(30, 30, 30) 100%);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  background-image: url("/img/hero_index.png");
+  background-position: center center;
+  background-size: cover !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,6 +91,7 @@ header#home {
 
 header#home h1, header#home h2 {
   text-shadow: 0px 4px 4px #1e1e1e;
+  animation: fade-in 1s ease-in-out;
 }
 
 header#home a {
@@ -94,6 +105,7 @@ header#home a {
   border-radius: 50px;
   transition: all 0.1s ease-in-out;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  animation: fade-in 2s ease-in-out;
 }
 header#home a:hover {
   color: #ffffff;
@@ -464,6 +476,16 @@ img.img {
     transform: translateY(0.2rem);
   }
   100% {
+    transform: translateY(0);
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
     transform: translateY(0);
   }
 }/*# sourceMappingURL=site.css.map */
