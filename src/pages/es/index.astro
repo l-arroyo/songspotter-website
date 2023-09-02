@@ -6,7 +6,7 @@ const images = ["/img/p_discover_desktop.png", "/img/p_liked_desktop.png"];
 const alt = ["Discover Page", "Liked Page"];
 ---
 
-<Layout title="SongSpotter">
+<Layout title="SongSpotter" lang="es">
 	<header id="home">
 		<h1>SongSpotter</h1>
 		<h2>The songs you didn't know you liked</h2>
@@ -17,7 +17,7 @@ const alt = ["Discover Page", "Liked Page"];
 		<h4>Discover new music based on your Spotify listening history</h4>
 		<Carrousel Images={images}; AltText={alt} />
 		<!--<img class="img" src="/img/p_discover_desktop.png" alt="SongSpotter discover page">-->
-		<a role="button" href="#about" class="button-down prevent-select" data-bs-toggle="tooltip" data-bs-placement="top" title="Next Section">
+		<a role="button" href="#about" class="button-down prevent-select">
 			<img src="/img/iconDown.svg" alt="Arrow Icon" draggable="false" width="35">
 		</a>
 	</main>
@@ -37,7 +37,7 @@ const alt = ["Discover Page", "Liked Page"];
 				</div>
 			</div>
 		</div>
-		<a role="button" href="#beta" class="button-down prevent-select" data-bs-toggle="tooltip" data-bs-placement="top" title="Next Section">
+		<a role="button" href="#beta" class="button-down prevent-select">
 			<img src="/img/iconDown.svg" alt="Arrow Icon" draggable="false" width="35">
 		</a>
 	</section>
@@ -50,7 +50,7 @@ const alt = ["Discover Page", "Liked Page"];
 			<span>SIGN UP</span>
 		</a>
 		<p class="mt-3 text-center">Already have access? <br/><a href="https://play.songspotter.app" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open SongSpotter">Go to the app</a></p>
-		<a role="button" href="#contribute" class="button-down prevent-select" data-bs-toggle="tooltip" data-bs-placement="top" title="Next Section">
+		<a role="button" href="#contribute" class="button-down prevent-select">
 			<img src="/img/iconDown-light.svg" alt="Arrow Icon" draggable="false" width="35">
 		</a>
 		<span id="wave-down"></span>
@@ -61,11 +61,11 @@ const alt = ["Discover Page", "Liked Page"];
 		<h4>
 			Any small donation is a big help for us
 		</h4>
-		<a class="donate-button" role="button" href="https://www.buymeacoffee.com/songspotter" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Make a donation">
+		<a class="donate-button" role="button" href="https://www.buymeacoffee.com/songspotter" target="_blank">
 			<img src="/img/iconDonate.svg" alt="Donate Icon" draggable="false">
 			<span>BUY US A COFFEE</span>
 		</a>
-		<a role="button" href="#discord" class="button-down prevent-select" data-bs-toggle="tooltip" data-bs-placement="top" title="Next Section">
+		<a role="button" href="#discord" class="button-down prevent-select" data-bs-toggle="tooltip">
 			<img src="/img/iconDown.svg" alt="Arrow Icon" draggable="false" width="35">
 		</a>
 	</section>
