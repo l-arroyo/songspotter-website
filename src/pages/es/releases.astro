@@ -1,0 +1,21 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const allPosts = await Astro.glob("./releases/*.md");
+---
+
+<Layout title="Releases" classes="releases">
+	<header id="releases">
+		<h1>Lanzamientos</h1>
+	</header>
+	<main id="releases">
+        <h3>Últimas actualizaciones</h3>
+    <ul>
+        {allPosts.map((post) => (
+                <li>
+                    <a href={post.url} data-bs-toggle="tooltip" data-bs-placement="bottom" title={`Release date ${post.frontmatter.date}`}>{post.frontmatter.title}</a>
+                </li>
+            ))}
+    </ul>
+    </main>
+</Layout>

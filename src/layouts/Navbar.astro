@@ -36,8 +36,8 @@ const links = ["/", "/releases"];
                     <span id="langField"></span>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a role="button" class="dropdown-item en-selector" onclick="switchLanguage(this);">EN</a>
-                    <a role="button" class="dropdown-item es-selector" onclick="switchLanguage(this);">ES</a>
+                    <a role="button" class="dropdown-item en-selector">EN</a>
+                    <a role="button" class="dropdown-item es-selector">ES</a>
                 </div>
             </li>
         </ul>
@@ -77,5 +77,21 @@ const links = ["/", "/releases"];
 
         setLanguage(selected.toLowerCase());
         langField.innerHTML = selected.toUpperCase();
+
+        // get current path
+        var path = window.location.pathname;
+
+        if(selected.toLowerCase() == "en") {
+
+            path = path.replace("/es/", "/en/");
+
+        } else if (selected.toLowerCase() == "es") {
+
+            path = path.replace("/en/", "/es/");
+
+        }
+
+        window.location.pathname = path;
+        
     }
 </script>

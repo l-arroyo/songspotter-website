@@ -5,6 +5,7 @@ date: 09/01/2023
 description: Release Notes of the SongSpotter's Pre-Alpha Version
 keywords: release, update, changelog, songspotter
 author: SongSpotter
+lang: en
 ---
 
 ## Release Notes
