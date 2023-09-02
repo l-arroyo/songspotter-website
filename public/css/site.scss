@@ -68,31 +68,6 @@ strong {
     font-weight: 600;
 }
 
-
-.navbar-collapse {
-    margin-left: 1rem;
-}
-
-.navbar-toggler {
-    margin-left: 0.5rem;
-    border: 0;
-}
-
-.dropdown-menu {
-    background-color: $site-black;
-    border: 0;
-    border-radius: 0px 0px 10px 10px;
-
-    & a {
-        color: $site-light !important;
-
-        &:hover {
-            background-color: $site-primary;
-            color: $site-black !important;
-        }
-    }
-}
-
 footer {
     background-color: $site-black !important;
     color: $site-light !important;
