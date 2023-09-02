@@ -30,14 +30,14 @@ const links = ["/", "/releases"];
                 ))
             }
 
-            <li class="nav-item dropdown show">
-                <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img src="/img/iconLanguage.svg" alt="Icono de cambio de idioma" width="20" draggable="false" />
                     <span id="langField"></span>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="#">EN</a>
-                    <a class="dropdown-item" href="#">ES</a>
+                    <a role="button" class="dropdown-item en-selector" onclick="switchLanguage(this);">EN</a>
+                    <a role="button" class="dropdown-item es-selector" onclick="switchLanguage(this);">ES</a>
                 </div>
             </li>
         </ul>
@@ -49,8 +49,33 @@ const links = ["/", "/releases"];
         const langField = document.querySelector("#langField");
         var lang = getLanguage();
 
-        if (langField) {
+        if (langField)
             langField.innerHTML = lang.toUpperCase();
-        }
+
+        const selectorEN = document.querySelector(".en-selector");
+        const selectorES = document.querySelector(".es-selector");
+
+        if(!selectorEN || !selectorES)
+            return;
+
+        selectorEN.addEventListener("click", function() {
+            switchLanguage(selectorEN.innerHTML);
+        });
+
+        selectorES.addEventListener("click", function() {
+            switchLanguage(selectorES.innerHTML);
+        });
     });
+
+    function switchLanguage(selected: string) {
+
+        const langField = document.querySelector("#langField");
+        var current = getLanguage();
+
+        if (selected.toLowerCase() == current.toLowerCase() || !langField)
+            return;
+
+        setLanguage(selected.toLowerCase());
+        langField.innerHTML = selected.toUpperCase();
+    }
 </script>

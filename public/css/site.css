@@ -68,6 +68,19 @@ strong {
   border: 0;
 }
 
+.dropdown-menu {
+  background-color: #1e1e1e;
+  border: 0;
+  border-radius: 0px 0px 10px 10px;
+}
+.dropdown-menu a {
+  color: #d9d9d9 !important;
+}
+.dropdown-menu a:hover {
+  background-color: #96a9a4;
+  color: #1e1e1e !important;
+}
+
 footer {
   background-color: #1e1e1e !important;
   color: #d9d9d9 !important;
