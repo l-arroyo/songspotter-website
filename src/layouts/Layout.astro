@@ -23,7 +23,7 @@ const { title, lang, classes } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body onscroll="scrollHandler" class={classes}>
+	<body class={classes}>
 		<Navbar classes="home" />
 		<slot />
 		<footer class="py-4 text-center">
@@ -39,7 +39,6 @@ const { title, lang, classes } = Astro.props;
 			});
 		</script>
 		<script type="text/javascript" src="/js/site.js"></script>
-		<script type="text/javascript" src="/js/scroll.js"></script>
 		<script type="text/javascript">
 			window.addEventListener("DOMContentLoaded", () => {
 				const btnDonateBase = document.querySelector(".donate-button");
