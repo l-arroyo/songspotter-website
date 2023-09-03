@@ -4,9 +4,7 @@ body {
   background-color: #1e1e1e !important;
   color: #d9d9d9 !important;
   overflow-x: hidden;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  /*user-select: none;*/
 }
 
 body.releases {
@@ -88,6 +86,9 @@ header#home {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 header#home h1,
@@ -167,6 +168,12 @@ section#beta .button-down {
 }
 section#beta .button-down:hover {
   background-color: #161616;
+}
+
+section#discord {
+  background: url("/img/bg-peaks.svg") no-repeat #555555;
+  background-position: center;
+  background-size: cover;
 }
 
 #wave-up {

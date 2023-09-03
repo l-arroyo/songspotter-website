@@ -11,7 +11,7 @@ body {
     background-color: $site-black !important;
     color: $site-light !important;
     overflow-x: hidden;
-    user-select: none;
+    /*user-select: none;*/
 }
 
 body.releases {
@@ -95,6 +95,7 @@ header#home {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 
 header#home h1,
@@ -182,6 +183,12 @@ section#beta {
             background-color: #161616
         }
     }
+}
+
+section#discord {
+    background: url('/img/bg-peaks.svg') no-repeat  $site-dark;
+    background-position: center;
+    background-size: cover;
 }
 
 #wave-up {
