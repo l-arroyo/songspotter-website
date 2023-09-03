@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Página no encontrada - SongSpotter</title>
+        <meta name="description" content="La página que buscas no se ha encontrado">
+		<link rel="stylesheet" href="/css/404.css" />
+    </head>
+    <body>
+        <h1>404</h1>
+        <h2>Página no encontrada</h2>
+        <a class="home-btn" href="/">volver al inicio</a>
+        <img src="/img/floating-disk.png" alt="floating disk background" draggable="false" class="floating-img" />
+
+        <script type="text/javascript" src="/js/site.js"></script>
+        <script type="text/javascript">
+            window.addEventListener("DOMContentLoaded", () => {
+
+                var subtitle = document.querySelector("h2");
+                var button = document.querySelector(".home-btn");
+                var lang = getLanguage();
+
+                document.documentElement.lang = lang;
+
+                if(lang == "en") {
+                    document.title = "Page not found - SongSpotter";
+                    document.getElementsByTagName('meta')["description"].content = "We couldn't find the page you are looking for";
+                    subtitle.innerHTML = "Page not found";
+                    button.innerHTML = "go back to home";
+                }
+            });
+        </script>
+    </body>
+</html>
