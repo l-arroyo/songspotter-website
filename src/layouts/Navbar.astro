@@ -79,7 +79,7 @@ const links = ["/", "/releases"];
         langField.innerHTML = selected.toUpperCase();
 
         // get current path
-        var path = window.location.pathname;
+        var path = window.location.href;
 
         if(selected.toLowerCase() == "en") {
 
@@ -91,7 +91,11 @@ const links = ["/", "/releases"];
 
         }
 
-        window.location.pathname = path;
+        if (path.includes("#"))
+            path = path.split("#")[0];
+
+            
+        window.location.href = path;
         
     }
 </script>
