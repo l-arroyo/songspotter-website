@@ -151,6 +151,14 @@ main#releases a {
   text-decoration: underline;
 }
 
+.home-spacing {
+  height: 15rem;
+}
+
+main#discover {
+  padding: 10rem 0 25rem 0 !important;
+}
+
 section#about {
   background: url("/img/bg-ondas.svg") no-repeat;
   background-size: contain;
