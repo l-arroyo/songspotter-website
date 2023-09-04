@@ -13,11 +13,4 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // get current path
     const path = window.location.pathname;
-
-    // add active class to nav links
-    navLinks.forEach((link) => {
-        if (link.href.contains(path)) {
-            link.parentElement.classList.add("active");
-        }
-    });
 });
