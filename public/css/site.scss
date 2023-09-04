@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 $site-primary: #96a9a4;
 $site-light: #d9d9d9;
@@ -11,11 +10,12 @@ body {
     background-color: $site-black !important;
     color: $site-light !important;
     overflow-x: hidden;
+    /*user-select: none;*/
 }
 
 body.releases {
-    background-color: $site-light!important;
-    color: $site-dark!important;
+    background-color: $site-light !important;
+    color: $site-dark !important;
 
     & footer {
         position: absolute;
@@ -38,7 +38,8 @@ body::-webkit-scrollbar-track {
     border-radius: 20px;
 }
 
-h1, h2 {
+h1,
+h2 {
     color: $site-light !important;
     text-align: center;
 }
@@ -49,6 +50,14 @@ h1 {
 
 h2 {
     font-size: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0 1em;
+    justify-content: center;
 }
 
 p a {
@@ -78,23 +87,25 @@ footer {
 
 header#home {
     height: 100vh;
-    background: rgb(150,169,164);
-    background: linear-gradient(300deg, rgba(150,169,164,1) 25%, rgba(118,127,125,1) 50%, rgba(85,85,85,1) 75%, rgba(30,30,30,1) 100%);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+    background-image: url('/img/hero_index.jpg');
+    background-position: center center;
+    background-size: cover !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 
-header#home h1, header#home h2 {
+header#home h1,
+header#home h2 {
     text-shadow: 0px 4px 4px $site-black;
+    animation: fade-in 1s ease-in-out;
 }
 
 header#home a {
     margin-top: 1.6rem;
-    color: $site-light  !important;
+    color: $site-light !important;
     background-color: $site-strong !important;
     padding: 1rem 2rem;
     text-decoration: none;
@@ -103,6 +114,7 @@ header#home a {
     border-radius: 50px;
     transition: all 0.1s ease-in-out;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    animation: fade-in 2s ease-in-out;
 
     &:hover {
         color: #ffffff;
@@ -123,7 +135,8 @@ header#releases {
     }
 }
 
-main:not(#releases), section {
+main:not(#releases),
+section {
     background-color: $site-black;
     padding: 25rem 0 25rem 0;
     display: flex;
@@ -137,7 +150,7 @@ main#releases {
     color: $site-black;
 
     & h3 {
-        margin-bottom: 2rem;
+        margin: 0 0 2rem 0;
     }
 
     & ul {
@@ -150,10 +163,20 @@ main#releases {
     }
 }
 
+.home-spacing {
+    height: 15rem;
+}
+
+main#discover {
+    padding: 10rem 0 25rem 0 !important;
+}
+
 section#about {
-    background: url('/img/bg-bubbles.svg') no-repeat;
-    background-size: contain;
-    padding-bottom: 20rem;
+    background: url('/img/bg-ondas.svg') no-repeat;
+    background-size: cover;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
 }
 
 section#beta {
@@ -161,14 +184,20 @@ section#beta {
     color: $site-black;
     padding: 0 !important;
 
-    .button-down {  
+    .button-down {
         background-color: $site-black;
         z-index: 1;
 
         &:hover {
-        background-color: #161616
+            background-color: #161616;
         }
     }
+}
+
+section#discord {
+    background: url('/img/bg-peaks.svg') no-repeat  $site-dark;
+    background-position: center;
+    background-size: cover;
 }
 
 #wave-up {
@@ -176,7 +205,7 @@ section#beta {
     background-position-y: top;
     background-size: cover;
     width: 100%;
-    height: 45vh;
+    height: 40vh;
     position: relative;
     top: -1px;
 }
@@ -186,7 +215,7 @@ section#beta {
     background-position-y: bottom;
     background-size: cover;
     width: 100%;
-    height: 45vh;
+    height: 40vh;
     position: relative;
     bottom: -1px;
     z-index: 0;
@@ -207,7 +236,9 @@ h4 {
     user-select: none;
 }
 
-.donate-button, .discord-button, .beta-button {
+.donate-button,
+.discord-button,
+.beta-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -239,8 +270,8 @@ h4 {
     height: 60px;
     width: 60px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center !important;
+    align-items: center !important;
     background-color: $site-light;
     border-radius: 50%;
     transition: all 0.1s ease-in-out;
@@ -272,7 +303,7 @@ img.img {
 
 .grid-structure {
     margin: 1rem 6rem;
-
+    z-index: 2;
     & h4 {
         text-align: center;
         margin-bottom: 1.6rem;
@@ -323,7 +354,7 @@ img.img {
     }
 
     p {
-        font-size: 1rem!important;
+        font-size: 1rem !important;
     }
 
     header#home a {
@@ -331,7 +362,9 @@ img.img {
         margin-top: 1rem;
     }
 
-    .donate-button, .discord-button, .beta-button {
+    .donate-button,
+    .discord-button,
+    .beta-button {
         font-size: 0.9rem;
 
         & img {
@@ -380,11 +413,11 @@ img.img {
     }
 
     h4 {
-        font-size: 1rem!important;
+        font-size: 1rem !important;
     }
 
     p {
-        font-size: 0.9rem!important;
+        font-size: 0.9rem !important;
     }
 
     #carousel {
@@ -423,7 +456,7 @@ img.img {
     }
 
     h4 {
-        font-size: 0.7rem!important;
+        font-size: 0.7rem !important;
     }
 
     header#home a {
@@ -460,7 +493,7 @@ img.img {
     }
 
     footer * {
-        font-size: 0.6rem!important;
+        font-size: 0.6rem !important;
     }
 
     section {
@@ -475,7 +508,7 @@ img.img {
 }
 
 @media screen and (max-width: 300px) {
-    
+
     h1 {
         font-size: 1.5rem;
     }
@@ -489,12 +522,12 @@ img.img {
     }
 
     h4 {
-        font-size: 0.4rem!important;
+        font-size: 0.4rem !important;
         margin-bottom: 0.4rem;
     }
 
     p {
-        font-size: 0.4rem!important;
+        font-size: 0.4rem !important;
     }
 
     header#home a {
@@ -504,7 +537,7 @@ img.img {
     }
 
     #carousel {
-        width: 15rem!important;
+        width: 15rem !important;
         margin-top: 0.5rem;
     }
 
@@ -512,18 +545,22 @@ img.img {
         height: 150px;
     }
 
-    .donate-button, .discord-button, .beta-button {
+    .donate-button,
+    .discord-button,
+    .beta-button {
         font-size: 0.4rem;
+
         & img {
             width: 15px;
         }
+
         padding: 0.4rem 0.8rem;
         margin-top: 0rem;
     }
 
     .grid-structure h4 {
         margin-bottom: 0.4rem;
-        font-size: 0.5rem!important;
+        font-size: 0.5rem !important;
     }
 
 }
@@ -531,25 +568,41 @@ img.img {
 /* ANIMATIONS */
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 @keyframes arrow {
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(0.2rem);
     }
+
     100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
         transform: translateY(0);
     }
 }

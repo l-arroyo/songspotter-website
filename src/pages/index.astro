@@ -9,7 +9,8 @@ import Layout from "../layouts/BasicLayout.astro";
 
             if (!lang) lang = "en";
 
-            window.location.href = lang;
+            window.location.href = `/${lang}`;
+            return;
         });
     </script>
 </Layout>

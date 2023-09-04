@@ -10,30 +10,30 @@ const alt = ["Discover Page", "Liked Page"];
 	<header id="home">
 		<h1>SongSpotter</h1>
 		<h2>The songs you didn't know you liked</h2>
-		<a role="button" href="#discover" class="prevent-select" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Click me!">START DISCOVERING</a>
+		<a role="button" href="#discover" class="prevent-select">EMPEZAR A DESCUBRIR</a>
 	</header>
+	<div class="home-spacing"></div>
 	<main id="discover">
-		<h3>Your music taste is <strong>unique</strong></h3>
-		<h4>Discover new music based on your Spotify listening history</h4>
+		<h3>Tus gustos musicales son <strong>únicos</strong></h3>
+		<h4>Descubre nueva música basada en lo que has estado escuchando</h4>
 		<Carrousel Images={images}; AltText={alt} />
-		<!--<img class="img" src="/img/p_discover_desktop.png" alt="SongSpotter discover page">-->
 		<a role="button" href="#about" class="button-down prevent-select">
 			<img src="/img/iconDown.svg" alt="Arrow Icon" draggable="false" width="35">
 		</a>
 	</main>
 	<section id="about">
-		<h3>About the project</h3>
+		<h3>Sobre el proyecto</h3>
 		<div class="grid-structure d-grid gap-3">
 			<div class="row">
 				<div class="col-12 col-md-6">
-					<h4>What is SongSpotter?</h4>
-					<p>SongSpotter is a web app that allows you to discover new music based on your favourite songs. It has been programmed in ASP.NET Core and it uses the Spotify API to get the user's listening history and recommendations.</p>
-					<p class="mt-4">We came up with the idea of SongSpotter because we were tired of the same old songs in our playlists. We wanted to create a new way to discover new music, but we didn't know where to start. That's why we decided to make an application with a simple and good looking interface to allow everyone to discover new music based on their own taste.</p>
+					<h4>¿Qué es SongSpotter?</h4>
+					<p>SongSpotter es una aplicación web que te permite descubrir nueva música basada en tus canciones favoritas. Ha sido programada en ASP.NET Core y utiliza la API de Spotify para obtener el historial de escucha y recomendaciones del usuario.</p>
+					<p class="mt-4">SongSpotter nació porque estábamos cansados de escuchar todo el rato las mismas canciones en nuestras listas de reproducción. Queríamos crear una nueva forma de descubrir música nueva, pero no sabíamos por dónde empezar. Por eso decidimos crear una aplicación con una interfaz simple y atractiva para permitir que cualquiera con una cuenta de Spotify pudiera usarla.</p>
 				</div>
 				<div class="col-12 col-md-6">
-					<h4>Our team</h4>
-					<p>We are <a href="https://www.linkedin.com/in/lucas-arroyo-174a28196/" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Connect with me in LinkedIn!">Lucas Arroyo</a> and <a href="https://www.linkedin.com/in/miguelarrojo/" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Connect with me in LinkedIn!">Miguel Arrojo</a>, two passionate developers who love music. We created SongSpotter for helping users to make music discovery easier than ever.</p>
-					<p class="mt-4">Even though we are just two people, we are working hard to make SongSpotter a reality. We are currently working on the beta version of the app, which will be released soon.</p>
+					<h4>Nosotros</h4>
+					<p>Somos <a href="https://www.linkedin.com/in/lucas-arroyo-174a28196/" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="ir a LinkedIn →">Lucas Arroyo</a> y <a href="https://www.linkedin.com/in/miguelarrojo/" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Ir a LinkedIn →">Miguel Arrojo</a>, dos apasionados desarrolladores amantes de la música. Hemos creado SongSpotter para ayudar a los usuarios a hacer que el descubrimiento de música sea más fácil que nunca.</p>
+					<p class="mt-4">A pesar de que solo somos dos personas, estamos trabajando duro para hacer de SongSpotter una realidad. Actualmente, estamos trabajando en la versión beta de la aplicación, que estará disponible pronto.</p>
 				</div>
 			</div>
 		</div>
@@ -43,13 +43,13 @@ const alt = ["Discover Page", "Liked Page"];
 	</section>
 	<section id="beta">
 		<span id="wave-up"></span>
-		<h3>Be the first to <strong>try it out</strong></h3>
-		<h4>Sign up here for the future closed beta</h4>
-		<a class="beta-button py-2" role="button" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sign up here">
+		<h3>Sé el primero en <strong>probarlo</strong></h3>
+		<h4>Regístrate aquí para la futura beta cerrada</h4>
+		<a class="beta-button py-2" role="button" target="_blank">
 			<img src="/img/iconSignUp.svg" alt="Sign Up Icon" draggable="false">
-			<span>SIGN UP</span>
+			<span>REGISTRARSE</span>
 		</a>
-		<p class="mt-3 text-center">Already have access? <br/><a href="https://play.songspotter.app" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Open SongSpotter">Go to the app</a></p>
+		<p class="mt-3 text-center">Ya tienes acceso? <br/><a href="https://play.songspotter.app">Ir a SongSpotter</a></p>
 		<a role="button" href="#contribute" class="button-down prevent-select">
 			<img src="/img/iconDown-light.svg" alt="Arrow Icon" draggable="false" width="35">
 		</a>
@@ -57,9 +57,9 @@ const alt = ["Discover Page", "Liked Page"];
 	</section>
 
 	<section id="contribute">
-		<h3>Contribute</h3>
+		<h3>Contribuye a la causa</h3>
 		<h4>
-			Any small donation is a big help for us
+			Apreciamos cada donación y apoyo a nuestro proyecto :)
 		</h4>
 		<a class="donate-button" role="button" href="https://www.buymeacoffee.com/songspotter" target="_blank">
 			<img src="/img/iconDonate.svg" alt="Donate Icon" draggable="false">
@@ -71,11 +71,11 @@ const alt = ["Discover Page", "Liked Page"];
 	</section>
 
 	<section id="discord">
-		<h3>Out community</h3>
-		<h4>Found a bug? Have a suggestion? Want to say hi?</h4>
-		<a class="discord-button" role="button" href="https://discord.gg/ErcZ4mnFd7" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Join to our discord server">
+		<h3>Nuestra comunidad</h3>
+		<h4>¿Has encontrado un bug? ¿Tienes alguna sugerencia? ¿Quieres saludarnos?</h4>
+		<a class="discord-button" role="button" href="https://discord.gg/ErcZ4mnFd7" target="_blank">
 			<img src="/img/iconDiscord.svg" alt="Discord Icon" draggable="false">
-			<span>DISCORD SERVER</span>
+			<span>ÚNETE AL SERVIDOR DE DISCORD</span>
 		</a>
 	</section>
 </Layout>

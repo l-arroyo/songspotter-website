@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
   font-family: "Work Sans", sans-serif !important;
   background-color: #1e1e1e !important;
   color: #d9d9d9 !important;
   overflow-x: hidden;
+  /*user-select: none;*/
 }
 
 body.releases {
@@ -30,7 +30,8 @@ body::-webkit-scrollbar-track {
   border-radius: 20px;
 }
 
-h1, h2 {
+h1,
+h2 {
   color: #d9d9d9 !important;
   text-align: center;
 }
@@ -41,6 +42,14 @@ h1 {
 
 h2 {
   font-size: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 1em;
+  justify-content: center;
 }
 
 p a {
@@ -69,18 +78,22 @@ footer {
 
 header#home {
   height: 100vh;
-  background: rgb(150, 169, 164);
-  background: linear-gradient(300deg, rgb(150, 169, 164) 25%, rgb(118, 127, 125) 50%, rgb(85, 85, 85) 75%, rgb(30, 30, 30) 100%);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  background-image: url("/img/hero_index.jpg");
+  background-position: center center;
+  background-size: cover !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
-header#home h1, header#home h2 {
+header#home h1,
+header#home h2 {
   text-shadow: 0px 4px 4px #1e1e1e;
+  animation: fade-in 1s ease-in-out;
 }
 
 header#home a {
@@ -94,6 +107,7 @@ header#home a {
   border-radius: 50px;
   transition: all 0.1s ease-in-out;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  animation: fade-in 2s ease-in-out;
 }
 header#home a:hover {
   color: #ffffff;
@@ -111,7 +125,8 @@ header#releases h1 {
   color: #1e1e1e !important;
 }
 
-main:not(#releases), section {
+main:not(#releases),
+section {
   background-color: #1e1e1e;
   padding: 25rem 0 25rem 0;
   display: flex;
@@ -125,7 +140,7 @@ main#releases {
   color: #1e1e1e;
 }
 main#releases h3 {
-  margin-bottom: 2rem;
+  margin: 0 0 2rem 0;
 }
 main#releases ul {
   color: #555555;
@@ -135,10 +150,20 @@ main#releases a {
   text-decoration: underline;
 }
 
+.home-spacing {
+  height: 15rem;
+}
+
+main#discover {
+  padding: 10rem 0 25rem 0 !important;
+}
+
 section#about {
-  background: url("/img/bg-bubbles.svg") no-repeat;
-  background-size: contain;
-  padding-bottom: 20rem;
+  background: url("/img/bg-ondas.svg") no-repeat;
+  background-size: cover;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
 }
 
 section#beta {
@@ -154,12 +179,18 @@ section#beta .button-down:hover {
   background-color: #161616;
 }
 
+section#discord {
+  background: url("/img/bg-peaks.svg") no-repeat #555555;
+  background-position: center;
+  background-size: cover;
+}
+
 #wave-up {
   background: url("/img/bg-wave-top.svg") no-repeat #1e1e1e;
   background-position-y: top;
   background-size: cover;
   width: 100%;
-  height: 45vh;
+  height: 40vh;
   position: relative;
   top: -1px;
 }
@@ -169,7 +200,7 @@ section#beta .button-down:hover {
   background-position-y: bottom;
   background-size: cover;
   width: 100%;
-  height: 45vh;
+  height: 40vh;
   position: relative;
   bottom: -1px;
   z-index: 0;
@@ -190,7 +221,9 @@ h4 {
        user-select: none;
 }
 
-.donate-button, .discord-button, .beta-button {
+.donate-button,
+.discord-button,
+.beta-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -207,11 +240,15 @@ h4 {
   transition: all 0.1s ease-in-out;
   margin-top: 1.3rem;
 }
-.donate-button:hover, .discord-button:hover, .beta-button:hover {
+.donate-button:hover,
+.discord-button:hover,
+.beta-button:hover {
   background: #333;
   transform: scale(1.05);
 }
-.donate-button:active, .discord-button:active, .beta-button:active {
+.donate-button:active,
+.discord-button:active,
+.beta-button:active {
   transform: scale(1.01);
 }
 
@@ -220,8 +257,8 @@ h4 {
   height: 60px;
   width: 60px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center !important;
+  align-items: center !important;
   background-color: #d9d9d9;
   border-radius: 50%;
   transition: all 0.1s ease-in-out;
@@ -251,6 +288,7 @@ img.img {
 
 .grid-structure {
   margin: 1rem 6rem;
+  z-index: 2;
 }
 .grid-structure h4 {
   text-align: center;
@@ -296,10 +334,14 @@ img.img {
     font-size: 1rem;
     margin-top: 1rem;
   }
-  .donate-button, .discord-button, .beta-button {
+  .donate-button,
+  .discord-button,
+  .beta-button {
     font-size: 0.9rem;
   }
-  .donate-button img, .discord-button img, .beta-button img {
+  .donate-button img,
+  .discord-button img,
+  .beta-button img {
     width: 25px;
   }
   .button-down {
@@ -431,12 +473,16 @@ img.img {
   .carousel-item img {
     height: 150px;
   }
-  .donate-button, .discord-button, .beta-button {
+  .donate-button,
+  .discord-button,
+  .beta-button {
     font-size: 0.4rem;
     padding: 0.4rem 0.8rem;
     margin-top: 0rem;
   }
-  .donate-button img, .discord-button img, .beta-button img {
+  .donate-button img,
+  .discord-button img,
+  .beta-button img {
     width: 15px;
   }
   .grid-structure h4 {
@@ -464,6 +510,16 @@ img.img {
     transform: translateY(0.2rem);
   }
   100% {
+    transform: translateY(0);
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
     transform: translateY(0);
   }
 }/*# sourceMappingURL=site.css.map */

@@ -7,9 +7,8 @@ import Layout from "../layouts/BasicLayout.astro";
         window.addEventListener("DOMContentLoaded", () => {
             let lang = getLanguage();
 
-            if (!lang) lang = "en";
-
-            window.location.href = `${lang}/releases`;
+            window.location.href = `/${lang}/releases`;
+            return;
         });
     </script>
 </Layout>
